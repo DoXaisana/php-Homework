@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 e.preventDefault(); // Prevent form submission
                 const formData = $(this).serialize(); // Serialize form data
 
-                $.post("index.php", formData, function (response) {
+                $.post("app.php", formData, function (response) {
                     if (response.success) {
                         $("#convertedAmount").val(response.result);
                         $("#error-message").addClass("d-none");
